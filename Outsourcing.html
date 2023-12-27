@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Cards Example</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="images/x-icon" href="img/logo.png" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle2.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stars.css">
+    <script src="script.js"></script>
+    
+    <link href="https://db.onlinewebfonts.com/c/8f2a9d487bbbc60974cd132fc3a63862?family=Aeonik+Regular" rel="stylesheet">
+    <style>
+        /* Styles for the popup */
+      
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            overflow-y: auto; /* Enable vertical scrolling */
+
+            
+            border: 1px solid black;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            
+            background-color: white;
+            color:black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+        h2{
+            color:#0075C5;
+            text-align: left;
+        }
+.card h2{
+    font-size: 3vh;
+    text-align: left;
+}
+        /* Styles for the overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            background-color: white;
+            color:black;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+        }
+.popup p{
+    font-size: 3vh;
+    margin-right:30px;
+    margin-left:30px;
+    text-align: justify;
+
+}
+.popup ul{
+    font-size: 3vh;
+    margin-right:30px;
+    margin-left:30px;
+    text-align: justify;
+
+}
+.popup h2{
+    font-size: 5vh;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+        .close-btn{
+background-color: red;
+border:0px;
+color:white;
+padding-left:10px;
+padding-right:10px;
+border-radius:15px;
+        }
+        .read-more-btn{
+            text-align: center;
+            width:200px;
+            margin: auto;
+        }
+        /* Styles for cards */
+        .card {
+            margin: 30px;
+            padding: 20px;
+            border: 1px solid black;
+            background-color: black;
+            color:white;     
+            width:500px;       
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div class="container-fluid mt-2">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class='navbar-brand' href='index.html'>
+                <img src="img/logo.png" style="width: 50px; height: 50px !important;" class="d-inline-block align-center" alt=""> Soven Developer
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="menu" class="navbar-nav ml-auto text-center">
+                    <li class="nav-item ">
+                        <a class="" href='index.html' >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href='services.html' >Fields We Work In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href='outsourcing.html' id='th'> Service Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href='aboutus.html'>About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="" href='contact.html'>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br><br>
+   
+    <center class="ghj">
+        <div class="btn-1  text-white"
+            style="border: #0075C5 solid 1px; width:200px">OTHER PROGRAMS</div></center>
+    <div class="container-fluid" style='backdrop-filter: blur(10px);'>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 ">
+                <h1 class="mt-md-5 text-center" style="font-size: 64px; font-family: Arial, Helvetica, sans-serif; color: #0075C5;
+                                -webkit-text-stroke-width: 0.7px; 
+                                ">
+                                Service Programs
+                </h1>
+                <p class="mt-3 text-white-50 text-center" style="font-size: 24px;">
+                   Our list doesnt end with technologies. We move a mile more, and give you something extra to achieve what you need!
+                </p>
+            </div>
+        </div><br><br>
+    </div>
+    <div id='stars'></div>
+            <div id='stars2'></div>
+    
+            
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+    
+        </div>
+    </div>
+    <div class="container-fluid m-0" >
+        <div class="row justify-content-center ">
+            <div class="col-12 mb-3">
+                <h1 class="text-center" style="font-size: 62px; color: #fff;">Our services <span style="color: #0075C5;
+                    -webkit-text-stroke-width: 0.7px; 
+                    ">span a wide</span> spectrum, including</h1>
+            </div></div>
+
+            <div class="container-fluid" style="margin:auto; display: block;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h2>Equity-Based Your Idea Development Initiative: Co-Funding and Nurturing Your Transformative ideas</h2>
+                            <p>
+                                We as a company that is passionate about bringing innovative ideas to life. We understand that not everyone has the financial resources to invest in the development of their ideas, which is why we offer a unique opportunity for those with brilliant ideas.
+                                </p>
+                            <button class="read-more-btn">Read More</button>
+                            <button class="view-less-btn" style="display: none;">View Less</button>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="popup">
+                            <h2>Equity-Based Your Idea Development Initiative: Co-Funding and Nurturing Your Transformative ideas</h2>
+                            <p>We as a company that is passionate about bringing innovative ideas to life. We understand that not everyone has the financial resources to invest in the development of their ideas, which is why we offer a unique opportunity for those with brilliant ideas.
+
+                 </p><p>               If you have a promising idea but lack the necessary financial backing, we are willing to subsidize the cost of development in exchange for equity in the project. Our team of highly skilled and experienced developers will work closely with you to bring your idea to life while sharing in the success of the project.
+                    <img src="https://i.pinimg.com/originals/20/9c/7c/209c7c3ce4663a1323f3a3f45f4971c5.gif" style="float:right; width:300px"> 
+       
+                </p><p>         In addition to subsidizing the cost of development, we also have a network of investors who are interested in investing in innovative and promising ideas. We will leverage that network to connect you with the right people who can help bring your idea to market.
+                    </p><p>  At our company, we believe that everyone deserves the opportunity to bring their ideas to life. We are committed to fostering a culture of innovation and creativity, and we believe that this approach not only benefits the creator but also adds value to our company as a whole.
+                               <br> 
+                       </p><p>  If you have a brilliant idea that you believe has the potential to change the world, get in touch with us, and let's make it happen together!
+                       </p><p>
+                        
+                        
+                        
+                        
+                        <center class="ghj">
+                            <a href="contact.html" class="btn mt-3 "
+                                style="border: #0075C5 solid 2px;border-radius: 15px;">Contact Us Today!</a>
+                        </center></p>
+                            <button class="close-btn">X</button>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h2>Affiliate Marketing Program</h2>
+                            <p>Join our Affiliate Marketing Program and start earning up to 20% commission on every sale you refer to Soven Developer's software development services. As an affiliate marketer for Soven Developer, you can refer potential clients to us and receive a commission for every sale that is generated from your referrals.</p>
+                            <button class="read-more-btn">Read More</button>
+                            <button class="view-less-btn" style="display: none;">View Less</button>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="popup">
+                            <h2 style="text-align: center;">Affiliate Marketing Program</h2>
+                            <div class="container"><div class="row"><div class="col-md-6">
+                                                            <p>Our Affiliate Marketing Program is free to join and easy to use. Simply sign up and become an affiliate, then start promoting our software development services through your website, social media, or other online channels. We offer a generous commission structure, real-time tracking and reporting, and a dedicated support team to help you succeed.
+
+                              </p></div> <div class="col-md-6"><img src="https://assets-global.website-files.com/59e16042ec229e00016d3a66/62fc19bda8349e63624d224a_affiliates-blog-listing.gif" style="float: right;"></div> </div>
+
+                              <div class="row"><div class="col-md-6"><img src="https://static.javatpoint.com/tutorial/affiliate-marketing/images/affiliate-marketing.png" style="float:center; height:400px"></div><div class="col-md-6">
+                              <p>  At Soven Developer, we offer a range of software development services, including `custom software development, mobile app development, and web application development. We work closely with our clients to deliver high-quality solutions that meet their specific needs and requirements. By joining our Affiliate Marketing Program, you'll have the opportunity to promote these services and earn a commission on every sale that is generated from your referrals.
+                            </p></div></div><p>
+                                <br>
+                                Join our Affiliate Marketing Program today and start earning commission on every sale you refer to Soven Developer!
+                                </p> <p>
+
+
+                                </div>
+                                <center class="ghj">
+                                    <a href="contact.html" class="btn mt-3 "
+                                        style="border: #0075C5 solid 2px;border-radius: 15px;">Contact Us Today!</a>
+                                </center></p>
+                            <button class="close-btn">X</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h2> Channel Partner</h2>
+                            <p>Join our Channel Partner Program and become a valuable member of the Soven Developer team. As a channel partner, you'll have access to our software development services and will be able to resell them to your clients, while earning a commission on every sale.</p>
+                            <button class="read-more-btn">Read More</button>
+                            <button class="view-less-btn" style="display: none;">View Less</button>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="popup">
+                            <h2>Channel Partner</h2>
+                            <p>Join our Channel Partner Program and become a valuable member of the Soven Developer team. As a channel partner, you'll have access to our software development services and will be able to resell them to your clients, while earning a commission on every sale.
+
+                             </p>
+                             <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/7934b071252497.5bbeed275a7a7.gif" style="height:400px;float:right"><p>   Our Channel Partner Program is designed to create mutually beneficial relationships between Soven Developer and our partners. We offer a range of benefits, including:
+                              
+                             </p>
+                            <p> 
+                             <ul><li>Access to our software development services, including custom software development, mobile app development, and web application development
+                             </li><li>Competitive commission rates on all sales generated through your referrals
+                            </li><li>Dedicated support from our team of experts
+                            </li><li>Access to marketing collateral and other resources to help you promote our services to your clients
+                            </li><li>Access to marketing collateral and other resources to help you promote our services to your clients
+                            </li><li> Regular updates and training to ensure you are up-to-date with our latest offerings and technology
+                            </li></ul><p>At Soven Developer, we pride ourselves on delivering high-quality software development services to our clients. By becoming a channel partner, you'll be able to offer these services to your clients while earning a commission on every sale. We believe in building strong relationships with our partners, and we are committed to providing the support and resources you need to be successful.
+                               </p><p>  Join our Channel Partner Program today and become a valuable member of the Soven Developer team!
+                            </p><p> <center class="ghj">
+                                <a href="contact.html" class="btn mt-3 "
+                                    style="border: #0075C5 solid 2px;border-radius: 15px;">Contact Us Today!</a>
+                            </center> </p>
+                            <button class="close-btn">X</button>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6">
+                        <div class="card">
+                            <h2>Efficient MVP Development Solutions for Startups: Test, Iterate, Succeed</h2>
+                            <p>As a startup, building a Minimum Viable Product (MVP) is a crucial step towards achieving success. An MVP is the most basic version of your product that you can develop and release to the market in order to test your idea and gain valuable feedback from users.</p>
+                            <button class="read-more-btn">Read More</button>
+                            <button class="view-less-btn" style="display: none;">View Less</button>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="popup">
+                            <h2>Efficient MVP Developement Solutions for Startups: Test, Iterate, Succeed</h2>
+                            <p>
+                                As a startup, building a Minimum Viable Product (MVP) is a crucial step towards achieving success. An MVP is the most basic version of your product that you can develop and release to the market in order to test your idea and gain valuable feedback from users.
+                                
+                              </p><p>  At our company, we specialize in helping startups develop their MVP products quickly and cost-effectively, using a combination of traditional development methods and cutting-edge no-code tools. We understand that as a startup, cost is a major concern, and we are committed to finding the most efficient and effective ways to bring your product to market.
+                                
+                              </p><p>Our team of experienced developers, designers, and product managers work closely with you to understand your vision, goals, and target audience. We then use this information to create a roadmap for your MVP development, ensuring that we prioritize the features that will deliver the most value to your users.
+                                
+                              </p><p>  One of the key advantages of our approach is our ability to leverage no-code tools where appropriate. No-code tools are platforms that allow developers and non-technical users alike to build software applications without writing any code. This approach can significantly reduce development time and cost, making it an ideal option for startups with limited resources.
+                                
+                              </p><p> We have expertise in a wide range of no-code platforms, including Bubble, Webflow, Glide, and Adalo, among others. We can help you determine which platform is best suited for your product, and work with you to design and develop a high-quality, functional MVP in a fraction of the time it would take with traditional development methods.
+                                
+                                At the same time, we recognize that not all products are suited for no-code development. For more complex products or those with unique requirements, we are well-equipped to develop custom solutions using traditional development methods. Our team has extensive experience in a range of programming languages, including Python, Java, JavaScript, and more.
+                            </p><p> 
+                                Ultimately, our goal is to help you bring your product to market as quickly and cost-effectively as possible, while ensuring that it meets the needs of your target audience. We are committed to providing high-quality, personalized service to each of our clients, and we look forward to working with you to develop your MVP product.
+                            </p><p>
+                                Contact us today to learn more about our MVP development services and how we can help you achieve your startup goals!
+                            </p><p> <center class="ghj">
+                                <a href="contact.html" class="btn mt-3 "
+                                    style="border: #0075C5 solid 2px;border-radius: 15px;">Contact Us Today!</a>
+                            </center></p>
+                            <button class="close-btn">X</button>
+                        </div>
+                    </div>
+                </div></div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 text-center">
+                        <div class="card" >
+                            <h2>Specialized IT Contract Services: Tailored Talent Solutions for Projects</h2>
+                            <p>We specialize in providing IT talent on contract. Our team of highly skilled professionals has years of experience in the industry and is committed to delivering top-quality services to meet the unique needs of our clients.</p>
+                            <button class="read-more-btn">Read More</button>
+                            <button class="view-less-btn" style="display: none;">View Less</button>
+                        </div>
+                        <div class="overlay"></div>
+                        <div class="popup">
+                            <h2>Specialized IT Contract Services: Tailored Talent Solutions for Projects</h2>
+                            <p>We specialize in providing IT talent on contract. Our team of highly skilled professionals has years of experience in the industry and is committed to delivering top-quality services to meet the unique needs of our clients.
+</p><p>
+                                At our company, we understand that finding the right IT talent can be a daunting task, especially when it comes to short-term contracts or specific projects. That's why we offer flexible and customizable solutions to ensure our clients get the best fit for their needs.
+       </p><p>                         
+                                Our IT talent pool includes developers, programmers, designers, engineers, project managers, and many other professionals with a wide range of skills and expertise. We work closely with our clients to understand their business goals and requirements, and then match them with the right talent to ensure successful project outcomes.
+                            </p>
+                            <img src="https://kohoconsulting.com/wp-content/uploads/2023/06/0f65c227b3198b5e00e6f19a2b4712de.gif" style="float:center; height: 400px;">
+                            <p>                  
+                                We believe in building long-term relationships with our clients by providing exceptional services and support throughout the contract period. Our team is available to answer any questions, provide regular updates, and address any concerns that may arise.
+                            </p><p>
+                                At our company, we are committed to staying up-to-date with the latest technologies and industry trends to ensure our clients receive the best possible services. We believe in continuous learning and improvement and strive to provide innovative solutions to our clients.
+                            </p><br>
+                                <p>
+                                If you're looking for reliable IT talent on contract, look no further than our company. Contact us today to learn more about our services and how we can help your business succeed.
+                                </p>
+                            <p> <center class="ghj">
+                                <a href="contact.html" class="btn mt-3"
+                                    style="border: #0075C5 solid 2px;border-radius: 15px;">Contact Us Today!</a>
+                            </center></p>                            <button class="close-btn">X</button>
+                        </div>
+                <!---->
+                </div>
+            </div></div>
+
+    <div class="container-fluid" id="footer">
+        <footer class="text-light text-center text-md-left">
+            <div class="container">
+                <div class="row mt-4 justify-content-md-between justify-content-center">
+                    <div class="col-12 col-md-6 pb-4">
+                        <div class="">
+                            <img src="img/logo.png" class="img-fluid" width="57" alt="">
+                        </div>
+                        <h5 class="mt-2 text-white">
+                            Software Development
+                        </h5>
+                        <p style="font-size: 13px;" class="text-white-50">Sovendeveloper is a versatile company specializing in website
+                            development, app development, and software design. With their expertise in creating
+                            innovative and user-centric solutions, they deliver high-quality products tailored to meet
+                            client's specific needs.</p>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4 mr-3">
+                        <div class="row justify-content-md-end justify-content-center mt-md-5 ">
+                            <div class="col-1"><a href="#" class="d-block px-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-facebook"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                    </svg></a></div>
+                            <div class="col-1"><a href="#" class="d-block px-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-twitter"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15" />
+                                    </svg></a></div>
+                            <div class="col-1"><a href="#" class="d-block px-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-instagram"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                    </svg></a></div>
+                            <div class="col-1"> <a href="#" class="d-block px-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="25" height="25" fill="currentColor" class="bi bi-linkedin"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4" />
+                                    </svg></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center py-4 text-white" style="font-size: 16px; border-top: #0075C5 2px solid;">
+                    sovendeveloper © 2023-24
+                </p>
+            </div>
+        </footer>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+    </div>
+    <script>
+        // JavaScript to handle popup functionality for each card
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+            const popups = document.querySelectorAll('.popup');
+            const overlays = document.querySelectorAll('.overlay');
+            const closeBtns = document.querySelectorAll('.close-btn');
+
+            cards.forEach(function (card, index) {
+                const readMoreBtn = card.querySelector('.read-more-btn');
+                const viewLessBtn = card.querySelector('.view-less-btn');
+                const popup = popups[index];
+                const overlay = overlays[index];
+                const closeBtn = closeBtns[index];
+
+                readMoreBtn.addEventListener('click', function () {
+                    card.style.display = 'none';
+                    popup.style.display = 'block';
+                    overlay.style.display = 'block';
+                    viewLessBtn.style.display = 'block';
+                });
+
+                viewLessBtn.addEventListener('click', function () {
+                    card.style.display = 'block';
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                    viewLessBtn.style.display = 'none';
+                });
+
+                closeBtn.addEventListener('click', function () {
+                    card.style.display = 'block';
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                    viewLessBtn.style.display = 'none';
+                });
+
+                overlay.addEventListener('click', function () {
+                    card.style.display = 'block';
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                    viewLessBtn.style.display = 'none';
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
